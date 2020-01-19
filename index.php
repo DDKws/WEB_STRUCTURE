@@ -1,0 +1,19 @@
+<?php
+    ini_set('display_errors','Off');
+    error_reporting('E_ALL');
+    $reg_verify=0;
+    $iu='index/';
+    $bu='body/';
+    $struct=[
+        $iu.'html_start.php',
+        $iu.'head.php',
+        $iu.'body_start.php',
+        $iu.$bu.'header.php',
+        $iu.$bu.'main.php',
+        $iu.$bu.'footer.php',
+        $iu.'body_end.php',
+        $iu.'html_end.php',
+    ];
+    for($i=0;$i<=count($struct);$i++){
+        require($struct[$i]);
+    }
